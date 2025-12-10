@@ -13,6 +13,10 @@
 
 namespace KINETO_NAMESPACE {
 
+std::string getXpuPtiVersion() {
+  return "\"" + std::string(ptiVersionString()) + "\"";
+}
+
 uint32_t XpuptiActivityProfilerSession::iterationCount_ = 0;
 std::vector<std::array<unsigned char, 16>>
     XpuptiActivityProfilerSession::deviceUUIDs_ = {};

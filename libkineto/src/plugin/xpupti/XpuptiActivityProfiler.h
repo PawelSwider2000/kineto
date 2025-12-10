@@ -15,6 +15,8 @@
 
 namespace KINETO_NAMESPACE {
 
+std::string getXpuPtiVersion();
+
 class XpuptiActivityProfilerSession
     : public libkineto::IActivityProfilerSession {
  public:

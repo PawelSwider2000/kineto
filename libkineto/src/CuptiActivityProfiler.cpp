@@ -231,6 +231,9 @@ CuptiActivityProfiler::CuptiActivityProfiler(
   if (isGpuAvailable()) {
     logGpuVersions();
   }
+#if defined(HAS_XPUPTI)
+  addVersionMetadata("xpupti_version", getXpuPtiVersion());
+#endif 
 }
 
 void CuptiActivityProfiler::logGpuVersions() {
